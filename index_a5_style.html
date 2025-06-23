@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Atendimento - A5 Solutions</title>
+    <title>Bem-vindo à A5 Solutions - Atendimento Online</title>
     <style>
         body {
             margin: 0;
@@ -16,7 +15,7 @@
             padding: 20px;
         }
         header img {
-            height: 60px;
+            height: 70px;
         }
         .hero {
             padding: 50px 20px;
@@ -27,29 +26,12 @@
             color: #ff6f00;
         }
         .hero p {
-            font-size: 1.2em;
-            margin-bottom: 30px;
-            color: #f5f5f5;
-        }
-        .cta-button {
-            padding: 15px 30px;
-            background-color: #ff6f00;
-            color: white;
-            text-decoration: none;
-            font-size: 1.1em;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-        .cta-button:hover {
-            background-color: #ff8f00;
-        }
-        #ccpContainer {
-            margin: 50px auto;
-            width: 400px;
-            height: 600px;
-            border: 2px solid #ff6f00;
-            border-radius: 10px;
-            background-color: #ffffff;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #f0f0f0;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
     </style>
 </head>
@@ -60,31 +42,37 @@
     </header>
 
     <section class="hero">
-        <h1>Fale com um Especialista</h1>
-        <p>Conecte-se com nossa equipe através da Central de Atendimento Online.</p>
-        <a class="cta-button" href="#ccpContainer">Iniciar Atendimento</a>
+        <h1>Conectando Pessoas e Soluções em Nuvem</h1>
+        <p>
+            Bem-vindo à A5 Solutions! Especialistas em criar experiências de atendimento Omnichannel com tecnologia de ponta.
+            Nossa equipe está pronta para ajudar sua empresa a transformar a forma como você se conecta com seus clientes,
+            entregando comunicação eficiente, segura e escalável.
+        </p>
+        <p>
+            Use o botão de chat (abaixo à direita) para iniciar uma conversa com um de nossos especialistas.
+        </p>
     </section>
 
-    <section id="widget">
-        <div id="ccpContainer">
-            <!-- O widget Amazon Connect será carregado aqui -->
-        </div>
-    </section>
+    <!-- Widget Amazon Connect Chat -->
+    <script type="text/javascript">
+      (function(w, d, x, id){
+        s=d.createElement('script');
+        s.src='https://a5connect.my.connect.aws/connectwidget/static/amazon-connect-chat-interface-client.js';
+        s.async=1;
+        s.id=id;
+        d.getElementsByTagName('head')[0].appendChild(s);
+        w[x] =  w[x] || function() { (w[x].ac = w[x].ac || []).push(arguments) };
+      })(window, document, 'amazon_connect', '6f6a6331-2bb4-4cc0-a642-2e86c3cd0f24');
 
-<script type="text/javascript">
-  (function(w, d, x, id){
-    s=d.createElement('script');
-    s.src='https://a5connect.my.connect.aws/connectwidget/static/amazon-connect-chat-interface-client.js';
-    s.async=1;
-    s.id=id;
-    d.getElementsByTagName('head')[0].appendChild(s);
-    w[x] =  w[x] || function() { (w[x].ac = w[x].ac || []).push(arguments) };
-  })(window, document, 'amazon_connect', '6f6a6331-2bb4-4cc0-a642-2e86c3cd0f24');
-  amazon_connect('styles', { iconType: 'CHAT_VOICE', openChat: { color: '#ffffff', backgroundColor: '#123456' }, closeChat: { color: '#ffffff', backgroundColor: '#123456'} });
-  amazon_connect('snippetId', 'QVFJREFIaXdlaTllQXR1SnQyK1JZc1Z3dWE3clBZQjQvWm15emlVb25scEltc3BJNmdFWEhQWmtUMUgzOGZLN01HWHVYY2VHQUFBQWJqQnNCZ2txaGtpRzl3MEJCd2FnWHpCZEFnRUFNRmdHQ1NxR1NJYjNEUUVIQVRBZUJnbGdoa2dCWlFNRUFTNHdFUVFNNndJQ1A2YzE4YjExL2MrdUFnRVFnQ3NuTzk5RWkxVkJoNVcvVmJjZFhsVHZXdzdwbTl5QTg3TGV0OVo2YmsrdmZpaThIdGdhKzZna1FvRlQ6OkwvWkdPaTZ1YzhQa0R3SUR2b3BjMWNKVUx6STg5Q0lzOHNFT1RGem9UcUN5eUJoV2pZV1B3MTJvSTlPUTkvb2RSWmVLZEc2TW9iQ2ZGbjZOYnQwamlZejZKL3dzREVDTmorZm9xWXJPa2hmYzJGdVFYeUhTdHFRL21TbElPLzNpMVl3anluWDVDa1FuUFV0Mjk2N3prcFpReGdBdEpXVT0=');
-  amazon_connect('supportedMessagingContentTypes', [ 'text/plain', 'text/markdown', 'application/vnd.amazonaws.connect.message.interactive', 'application/vnd.amazonaws.connect.message.interactive.response' ]);
-</script>
+      amazon_connect('styles', { iconType: 'CHAT_VOICE', openChat: { color: '#ffffff', backgroundColor: '#123456' }, closeChat: { color: '#ffffff', backgroundColor: '#123456'} });
+      amazon_connect('snippetId', 'QVFJREFIaXdlaTllQXR1SnQyK1JZc1Z3dWE3clBZQjQvWm15emlVb25scEltc3BJNmdFWEhQWmtUMUgzOGZLN01HWHVYY2VHQUFBQWJqQnNCZ2txaGtpRzl3MEJCd2FnWHpCZEFnRUFNRmdHQ1NxR1NJYjNEUUVIQVRBZUJnbGdoa2dCWlFNRUFTNHdFUVFNNndJQ1A2YzE4YjExL2MrdUFnRVFnQ3NuTzk5RWkxVkJoNVcvVmJjZFhsVHZXdzdwbTl5QTg3TGV0OVo2YmsrdmZpaThIdGdhKzZna1FvRlQ6OkwvWkdPaTZ1YzhQa0R3SUR2b3BjMWNKVUx6STg5Q0lzOHNFT1RGem9UcUN5eUJoV2pZV1B3MTJvSTlPUTkvb2RSWmVLZEc2TW9iQ2ZGbjZOYnQwamlZejZKL3dzREVDTmorZm9xWXJPa2hmYzJGdVFYeUhTdHFRL21TbElPLzNpMVl3anluWDVDa1FuUFV0Mjk2N3prcFpReGdBdEpXVT0=');
+      amazon_connect('supportedMessagingContentTypes', [
+        'text/plain',
+        'text/markdown',
+        'application/vnd.amazonaws.connect.message.interactive',
+        'application/vnd.amazonaws.connect.message.interactive.response'
+      ]);
+    </script>
 
 </body>
 </html>
-
