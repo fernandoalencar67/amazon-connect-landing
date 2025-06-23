@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14
+    commands:
+      - echo "Starting deploy process"
+
+  build:
+    commands:
+      - echo "Uploading site content to S3..."
+      - aws s3 cp . s3://a5connect-site/ --recursive --acl public-read
+
+artifacts:
+  files:
+    - '**/*'
