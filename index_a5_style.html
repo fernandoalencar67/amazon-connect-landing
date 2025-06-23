@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Atendimento - A5 Solutions</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #ffffff;
+            text-align: center;
+        }
+        header {
+            padding: 20px;
+        }
+        header img {
+            height: 60px;
+        }
+        .hero {
+            padding: 50px 20px;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #ff6f00;
+        }
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: #f5f5f5;
+        }
+        .cta-button {
+            padding: 15px 30px;
+            background-color: #ff6f00;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #ff8f00;
+        }
+        #ccpContainer {
+            margin: 50px auto;
+            width: 400px;
+            height: 600px;
+            border: 2px solid #ff6f00;
+            border-radius: 10px;
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="logo.png" alt="Logo A5 Solutions">
+    </header>
+
+    <section class="hero">
+        <h1>Fale com um Especialista</h1>
+        <p>Conecte-se com nossa equipe através da Central de Atendimento Online.</p>
+        <a class="cta-button" href="#ccpContainer">Iniciar Atendimento</a>
+    </section>
+
+    <section id="widget">
+        <div id="ccpContainer">
+            <!-- O widget Amazon Connect será carregado aqui -->
+        </div>
+    </section>
+
+    <script src="https://connect-cdn.amazon.com/ccp-v2.js"></script>
+    <script>
+        connect.core.initCCP(document.getElementById('ccpContainer'), {
+            ccpUrl: "https://SEU-ID-DE-CONNECT.my.connect.aws/ccp-v2/",
+            loginPopup: true,
+            region: "sa-east-1",
+            softphone: { allowFramedSoftphone: true }
+        });
+    </script>
+
+</body>
+</html>
